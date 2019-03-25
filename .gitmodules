@@ -1,0 +1,6 @@
+[submodule "order-system"]
+	path = order-system
+	url = https://github.com/james-bowers/order-system
+[submodule "me"]
+	path = me
+	url = https://github.com/james-bowers/me
