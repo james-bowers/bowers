@@ -3,7 +3,7 @@ default: up
 up:
 	docker-compose up
 
-build: setup
+build:
 	docker-compose build
 
 hard_reset_to_master:

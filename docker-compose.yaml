@@ -10,25 +10,17 @@ services:
       POSTGRES_PASSWORD: pass
     ports:
       - 5432:5432
-  order_system:
+  order-system:
     ports:
       - 8084:8084
     build: ./order-system
-    command: bash -c "mix ecto.reset && mix run --no-halt"
-    environment:
-      MIX_ENV: dev
-    volumes:
-      - ./order-system:/app
+    command: sh -c "mix ecto.reset && mix run --no-halt"
     links:
       - "db:database"
   me:
     ports:
       - 8085:8084
     build: ./me
-    command: bash -c "mix ecto.reset && mix run --no-halt"
-    environment:
-      MIX_ENV: dev
-    volumes:
-      - ./me:/app
+    command: sh -c "mix ecto.reset && mix run --no-halt"
     links:
       - "db:database"
