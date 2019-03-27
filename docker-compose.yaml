@@ -12,14 +12,14 @@ services:
       - 5432:5432
   order-system:
     ports:
-      - 8084:8084
+      - 3084:3084
     build: ./order-system
     command: sh -c "mix ecto.reset && mix run --no-halt"
     links:
       - "db:database"
   me:
     ports:
-      - 8085:8084
+      - 3085:3084
     build: ./me
     command: sh -c "mix ecto.reset && mix run --no-halt"
     links:
