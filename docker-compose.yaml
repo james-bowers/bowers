@@ -10,17 +10,22 @@ services:
       POSTGRES_PASSWORD: pass
     ports:
       - 5432:5432
+    networks:
+      - postgres-net
   order-system:
     ports:
       - 3084:3084
     build: ./order-system
     command: sh -c "mix ecto.reset && mix run --no-halt"
-    links:
-      - "db:database"
+    networks:
+      - postgres-net
   me:
     ports:
       - 3085:3084
     build: ./me
     command: sh -c "mix ecto.reset && mix run --no-halt"
-    links:
-      - "db:database"
+    networks:
+      - postgres-net
+networks:
+  postgres-net:
+    driver: bridge
