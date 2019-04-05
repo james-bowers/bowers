@@ -4,6 +4,6 @@
 [submodule "me"]
 	path = me
 	url = https://github.com/james-bowers/me
-[submodule "ex-sdk-bowers"]
-	path = ex-sdk-bowers
-	url = git@github.com:james-bowers/ex-sdk-bowers.git
+[submodule "bowers-lib"]
+	path = bowers-lib
+	url = git@github.com:james-bowers/bowers-lib.git
