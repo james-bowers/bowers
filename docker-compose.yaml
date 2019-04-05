@@ -21,7 +21,7 @@ services:
       - postgres-net
   me:
     ports:
-      - 3085:3084
+      - 3085:3085
     build: ./me
     command: sh -c "mix ecto.reset && mix run --no-halt"
     networks:

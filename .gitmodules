@@ -7,3 +7,6 @@
 [submodule "bowers-lib"]
 	path = bowers-lib
 	url = git@github.com:james-bowers/bowers-lib.git
+[submodule "bowers-sdk"]
+	path = bowers-sdk
+	url = git@github.com:james-bowers/bowers-sdk.git
